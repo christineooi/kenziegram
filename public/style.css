@@ -39,11 +39,11 @@ a {
     font-weight: bold;
 }
 
-img {
+/* img {
     object-fit: cover;
     width: 150px;
     height: 150px;
-}
+} */
 
 #message {
     height: 25px;
