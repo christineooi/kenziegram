@@ -14,10 +14,10 @@ app.use(express.urlencoded({ extended: false }));
 app.set('views', './views');
 app.set('view engine', 'pug');
 
-const dbName = 'xforcekenziegram';
+const dbName = 'kenziegram';
 const DB_USER = 'admin';
 const DB_PASSWORD = 'admin';
-const DB_URI = 'ds217350.mlab.com:17350';
+const DB_URI = 'ds053428.mlab.com:53428';  
 const PORT = process.env.PORT || 3000;
 const path = './public/uploads';
 const profilePicPath = './public/profilePictures'
@@ -65,17 +65,12 @@ app.get('/', function (req, res) {
     });
 })
 
-app.get('/register', (req, res) => {
-
-    res.render('signup')
-})
-
 app.get('/chat', (req, res) => {
     res.render('chat')
 })
 
 app.get('/post', (req, res) => {
-    res.render('indexpost')
+    res.render('post')
 })
 
 // Gets the latest images uploaded after a client-specified timestamp
@@ -113,7 +108,7 @@ app.post('/upload', upload.single('myFile'), function (req, res, next) {
         .write(`${path}/${req.file.filename}`, function (err) {
             // This creates the new file with our modifications
             if (!err) console.log('Image Resized!')
-                res.render('indexget.pug', { title: 'KenzieGram', imagename: `resized${req.file.filename}` });
+                res.render('photos.pug', { title: 'KenzieGram', imagename: `resized${req.file.filename}` });
             })
             let post = {
                 image: req.file.filename,
@@ -145,7 +140,7 @@ app.post('/createProfile', profilePicUpload.single('profilePic'), function (req,
 
             instance.save()
                 .then(instance => res.send())
-            res.render('indexget.pug', { title: 'KenzieGram', arrayofimages: items, userName: req.body.name });
+            res.render('photos.pug', { title: 'KenzieGram', arrayofimages: items, userName: req.body.name });
 
         })
 });
@@ -157,10 +152,10 @@ app.post('/login', (req, res) => {
     let userName = req.body.name;
     db.collection('users').findOne({ 'name' : userName})
     .then((user) =>{
-        res.render('indexget', { title: 'KenzieGram', posts: user.posts, userName})
+        res.render('photos', { title: 'KenzieGram', posts: user.posts, userName})
     })
     .catch((err) =>{
-        res.render('indexget', { title: 'KenzieGram', userName})
+        res.render('photos', { title: 'KenzieGram', userName})
     })
 })
 

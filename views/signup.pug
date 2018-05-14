@@ -3,58 +3,36 @@ html
     include includes/header.pug
     main
         body
-            div.parallax-container.parallax-container-height.valign-wrapper
-                div.parallax
-                    img(src="images/bi2.jpg")
-                div.container
-                    div.row
-                        div.col.s12.center
-                            span.welcome-text.white-text Welcome!
+            marquee(behavior="alternate" direction="left" scrollamount="3")
+                img(src="https://i.imgur.com/xhKrJGE.jpg" class="scrolling-header")
             div.container.section.white
-                h1.orange-text.center Are you new?
-                h4.teal-text Sign up here
-                p= typeof msg != 'undefined' ? msg : ''
-                form(method='POST' action='/createProfile')
-                    div.form-group
-                        label(for='name') Name:
-                        input#name.form-control(type='text', placeholder='username' name='name' require)
-
-                    div.file-field.input-field
-                        div.btn.orange
-                            span Upload Profile Picture:
-                            input(type="file", name="profilePic")
-                        div.file-path-wrapper
-
-                            input.form-control(class="file-path validate", type="text")
-                        
-                    
-
-                    button.btn.btn-primary(type='submit') Create Profile
-                br
-            div.parallax-container.parallax-container-height.valign-wrapper
-                div.parallax
-                    img(src="images/bi2.jpg")
-                div.container
-                    div.row
-                        div.col.s12.center
-                            span.welcome-subtext.white-text.text-darken-2 Already a member?
-                    
-                    
+                h1.orange-text.center Welcome!
+                div.outline
+                    h4.teal-text Sign up here
+                    p= typeof msg != 'undefined' ? msg : ''
+                    form(method='POST' action='/createProfile')
+                        div.form-group
+                            label(for='name') Name:
+                            input#name.form-control(type='text', placeholder='username' name='name' require)
+                        div.file-field.input-field
+                            div.btn.orange
+                                span Upload Profile Picture:
+                                input(type="file", name="profilePic")
+                            div.file-path-wrapper
+                                input.form-control(class="file-path validate", type="text")
+                        button.btn.btn-primary(type='submit') Create Profile
             div.container.section.white
-                h5 Login here
-                p= typeof msg != 'undefined' ? msg : ''
-                form(method='POST' action='/login')
-                    div.form-group
-                        label(for='name') Name:
-                        input#name.form-control(type='text', placeholder='username' name='name' require)
-                    br
-                    button.btn.btn-primary(type='submit') Login here
-                    br
-                    br
-                
-
-
-            
+                h2.teal-text.center Already a member?
+                div.outline
+                    h5 Login here
+                    p= typeof msg != 'undefined' ? msg : ''
+                    form(method='POST' action='/login')
+                        div.form-group
+                            label(for='name') Name:
+                            input#name.form-control(type='text', placeholder='username' name='name' require)
+                        br
+                        button.btn.btn-primary(type='submit') Login here
+                        br
+                        br
     footer
         include includes/footer.pug
-
