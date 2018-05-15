@@ -120,7 +120,7 @@ main {
 
 .welcome-text {
     font-size: 80px;
-    text-shadow: 0px 0px 4px black;
+    /* text-shadow: 0px 0px 4px black; */
 }
 
 .welcome-subtext {
@@ -134,4 +134,14 @@ main {
 
 .shadow {
     box-shadow: 0px 10px 5px black;
+}
+
+.outline {
+    border: 5px solid rgba(0, 0, 0, .25);
+    padding: 3em;
+}
+
+.scrolling-header {
+    height: 200px;
+    margin-top: 2em;
 }
