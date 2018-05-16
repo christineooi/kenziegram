@@ -4,7 +4,7 @@ html
     main
         body
             div.container
-                h1.center.teal-text Make a Post
+                h1.center.black-text Make a Post
                 
                 p= typeof msg != 'undefined' ? msg : ''
 
@@ -16,22 +16,24 @@ html
                 
 
                     div.file-field.input-field
-                        div.btn.orange
+                        div.btn.kenzie-lightblue
                             span Upload Photo!
-                            input(type="file" accept="image/*" name="myFile")
+                            input(type="file" accept="image/*" name="myFile" id=file-input)
                         div.file-path-wrapper
                             input.form-control(class="file-path validate", type="text")
                         
                     
-                    button.btn.btn-primary.orange.center(type='submit') Create Post
+                    button.btn.btn-primary.kenzie-lightblue.center(type='submit') Create Post
                     
                 br
-                input(class="btn", type="button", value="Go back", onclick="history.back()")
+                input(class="btn", type="button", value="Go back", onclick="history.back()").grey
                     
-                input(class="btn", type="button", value="home", onclick="window.location.href='http://localhost:3000'")
+                input(class="btn", type="button", value="home", onclick="window.location.href='http://localhost:3000'").grey
                 div(id="images")
                 br
                 br
+
     footer
 
         include includes/footer.pug
+
