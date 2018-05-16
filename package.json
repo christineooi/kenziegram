@@ -19,11 +19,11 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/christineooi/kenziegram.git"
+    "url": "git+https://github.com/kavikamal/team-kenziegram.git"
   },
   "bugs": {
-    "url": "https://github.com/christineooi/kenziegram/issues"
+    "url": "https://github.com/kavikamal/team-kenziegram/issues"
   },
-  "homepage": "https://github.com/christineooi/kenziegram#readme",
+  "homepage": "https://github.com/kavikamal/team-kenziegram#readme",
   "description": ""
 }
