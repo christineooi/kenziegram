@@ -1,0 +1,15 @@
+doctype
+html
+    include includes/header.pug
+    title= title
+main    
+    body
+        header
+        br
+        div
+            if errorMessage
+                span= errorMessage
+            else 
+                span= "Woops! Cannot locate error message."   
+footer            
+    include includes/footer.pug
