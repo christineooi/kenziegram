@@ -12,13 +12,32 @@ main {
     flex: 1 0 auto;
 }
 
+@media only screen and (min-width: 876px) {
 .chatlogs {
     padding: 10px;
-    width: 100%;
-    height: 450px;
+    width: 850px;
+    height: 500px;
     overflow-x: hidden;
     overflow-y: scroll;
-}
+}}
+
+@media only screen and (min-width: 601px) and (max-width: 875px){
+    .chatlogs {
+        padding: 10px;
+        width: 575px;
+        height: 500px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+}}
+
+@media only screen and (max-width: 600px) {
+    .chatlogs {
+        padding: 10px;
+        width: 100%;
+        height: 350px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+}}
 
 .chatlogs::-webkit-scrollbar {
     width: 8px;
@@ -77,12 +96,12 @@ main {
     background: #fbfbfb;
     width: 75%;
     height: 50px;
-    border: 2px solid #eee;
+    border: 2px solid rgb(0, 0, 0, .25);
     border-radius: 3px;
     resize: none;
     padding: 10px;
     font-size: 18px;
-    color: #333;
+    /* color: #333; */
 }
 
 .chat-form textarea:focus {
@@ -113,14 +132,19 @@ main {
     -moz-transition: background .2s ease;
     -o-transition: background .2s ease;
 }
+.card{ 
+    border: 1px solid rgb(0, 0, 0, .25);
+}
 
 .card-size {
     display: flex;
+    align-items:center;
+    justify-content: center;
 }
 
 .welcome-text {
     font-size: 80px;
-    text-shadow: 0px 0px 4px black;
+    /* text-shadow: 0px 0px 4px black; */
 }
 
 .welcome-subtext {
@@ -135,3 +159,50 @@ main {
 .shadow {
     box-shadow: 0px 10px 5px black;
 }
+
+.outline {
+    border: 5px solid rgba(0, 0, 0, .25);
+    padding: 3em;
+}
+
+.scrolling-header {
+    height: 200px;
+    margin-top: 2em;
+}
+
+.kenzie-darkblue {
+    background-color: rgb(4, 54, 105)
+}
+
+.kenzie-lightblue {
+    /* color: rgb(140, 204, 176); */
+    /* color: black; */
+    background-color: #02568B
+}
+
+.kenzie-accent {
+    color: #D0021B;
+}
+
+.kenzie-accent-background {
+    color: #D0021B;
+}
+
+@media only screen and (max-width: 379px){
+    .logo {
+        height: 100%;
+        margin-left: 50%;
+    }}
+
+@media only screen and (min-width: 380px) and (max-width: 600px){
+    .logo {
+        height: 100%;
+        margin-left: 60%;
+}}
+
+@media only screen and (min-width: 601px){
+.logo {
+    height: 100%;
+    margin-left: 1%;
+    
+}}
