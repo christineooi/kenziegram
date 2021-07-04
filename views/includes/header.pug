@@ -6,7 +6,8 @@ head
         link(rel='stylesheet', href='sidenav.css', type='text/css')
 
 nav
-        div.nav-wrapper
+        div.nav-wrapper.kenzie-darkblue
+                img(src="https://static1.squarespace.com/static/5992c2c7a803bb8283297efe/t/59c803110abd04d34ca9a1f0/1525725154231/").logo
                 a(href="/", class="brand-logo center") Kenziegram
                 a(href="#", data-target="mobile-demo", class="sidenav-trigger") <i class="material-icons">menu</i>
                 ul.right.hide-on-med-and-down
@@ -14,11 +15,11 @@ nav
                         li
                                 a(href="/") home
                         li
+                                a(href="/photos") photos
+                        li
                                 a(href="/post") post
                         li
-                                a(href="/chat") chat
-                        li
-                                a(href="/register") register       
+                                a(href="/chat") chat    
 ul#mobile-demo.sidenav
         li
                 a(href="/") home
