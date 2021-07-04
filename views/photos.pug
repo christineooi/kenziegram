@@ -1,0 +1,29 @@
+doctype
+html
+   include includes/header.pug
+   title= title
+main    
+   body
+       header
+       br
+       div#message.container.center-align    
+           button.btn.kenzie-lightblue(onclick="window.location.href='/post'") Make New Post
+       br
+       div.container.photowrap
+           
+               if posts
+                   each post in posts
+                       div.card.hoverable.materialboxed.kenziephoto
+                           div.card-image
+                               img(src=post.image)
+                               span.card-title= userName
+                           div.card-content
+                               p= post.caption
+                           div.card-action
+                               a(href="#")
+                       
+   
+       div#message.container.center-align  
+     
+footer            
+   include includes/footer.pug

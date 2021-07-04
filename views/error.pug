@@ -1,0 +1,15 @@
+doctype
+html
+    include includes/header.pug
+    title= title
+main    
+    body
+        header
+        br
+        div.outline
+            if errorMessage
+                blockquote= "ʕ•ᴥ•ʔ---" + errorMessage 
+            else 
+                div= "Woops! Cannot identify error."   
+footer            
+    include includes/footer.pug
